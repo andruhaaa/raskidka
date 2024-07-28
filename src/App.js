@@ -46,7 +46,7 @@ function App() {
   return (
     <div style={{display: "flex", flexDirection: "column"}}>
       <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
-        <p>Распределение обязанностей</p>
+        <h1>Распределение обязанностей</h1>
       </div>
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div style={{ flex: 1 }}>
