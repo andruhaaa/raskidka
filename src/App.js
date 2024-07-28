@@ -16,6 +16,7 @@ const exceptions = {
 function App() {
 
   const [raskidka, setRaskidka] = React.useState({})
+  const [ready, setReady] = React.useState(false)
 
   const raspred = () => {
     const boys = randomOrder(bojcy)
@@ -40,6 +41,7 @@ function App() {
       raspred()
     } else {
       setRaskidka(res)
+      setReady(true)
     }
   }
 
@@ -72,8 +74,8 @@ function App() {
         <div style={{ flex: 1 }}>
           <h2>Результат:</h2>
           <ol>
-            {Object.keys(raskidka).map((k,v) => (
-              <li style={{marginTop: 10}}>{`${k}: ${raskidka[k]}`}</li>
+            {ready && bojcy.map((name) => (
+              <li style={{marginTop: 10}}>{`${name}: ${raskidka[name]}`}</li>
             ))}
           </ol>
         </div>
